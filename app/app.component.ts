@@ -1,40 +1,27 @@
-import { Component } from '@angular/core';
+import { Component } from 'angular2/core';
+import { Meal } from './meal.model';
+import { MealListComponent } from './meal-list.component';
 
 @Component({
   selector: 'my-app',
+  directives: [MealListComponent],
   template: `
   <div class="wrap">
   <h1>Meal Tracker</h1>
     <div class="container">
-      <h3 (click)="showDetails(currentMeal)" *ngFor="let currentMeal of meals">{{ currentMeal.mealName }}</h3>
-      <div>
-        <h1>Edit Task</h1>
-        <label>Description: {{ selectedMeal.mealName }}</label>
-        <input [(ngModel)]="selectedMeal.mealName">
-        <label>Calories: {{ selectedMeal.calorieInfo }}</label>
-        <input [(ngModel)]="selectedMeal.calorieInfo">
-        <label>Meal Information: {{ selectedMeal.mealInfo }}</label>
-        <input [(ngModel)]="selectedMeal.mealInfo">
-      </div>
+      <meal-list [mealList]="meals"></meal-list>
     </div>
   </div>
   `
 })
 
 export class AppComponent {
-  public meals: Meal[] = [
-      new Meal("Don Carlos's Burrito", 800, "This burrito will most definitely fill you up!"),
-      new Meal("Stella's Spaghetti", 2000, "Haven't ate all day? This spaghetti will do justice!"),
-      new Meal("Sally's Salad", 350, "Salads are cool, but they won't fill you up")
+  public meals: Meal[];
+  constructor() {
+    this.meals = [
+      new Meal("Vegan burger", 450, "Best vegan burger in town!"),
+      new Meal("Macaroni and Cheese", 750, "I walked home after eating this"),
+      new Meal("Doughnut peach", 100, "Small snack before dinner")
     ];
-
-  selectedMeal: Meal = this.meals[0];
-  showDetails(clickedMeal: Meal) {
-    this.selectedMeal = clickedMeal;
   }
-}
-
-export class Meal {
-  public done: boolean = false;
-  constructor(public mealName: string, public calorieInfo: number, public mealInfo: string) {}
 }
