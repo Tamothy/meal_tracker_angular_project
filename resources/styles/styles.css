@@ -1,8 +1,17 @@
 body {
   font-family: futura;
   text-align: center;
+  background-image: url("http://illusion.scene360.com/wp-content/uploads/2015/07/peechaya-burroughs-05.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: white;
+  padding: 80px;
 }
 
 h1 {
+  color: gray;
+}
+
+.red {
   color: red;
 }
