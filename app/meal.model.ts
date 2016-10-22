@@ -1,3 +1,4 @@
 export class Meal {
-  constructor(public name: string, public calories: number, public details: string) {}
+  public done: boolean = false;
+  constructor(public name: string, public calorie: number, public description: string) {   }
 }
