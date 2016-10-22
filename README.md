@@ -10,7 +10,6 @@ This project manages logged meals for the user. A user can add new meals, edit m
 
 ## Setup/Installation Requirements
 
-* Check out the GitHub page: https://tamothy.github.io/meal_tracker_angular_project
 * Download or clone repository
 * Run these commands in terminal:
   * `$ npm install`
