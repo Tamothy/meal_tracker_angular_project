@@ -13,7 +13,7 @@ import { Meal } from './meal.model';
       </select>
       <div *ngFor="let currentMeal of childMealList | calorie: selectedCalorieOption">
         <h5><span class="red">{{ currentMeal.name }}</span></h5>
-        <h5>Calorie Count: {{ currentMeal.calorie }}</h5>
+        <h5>Calorie count: {{ currentMeal.calorie }}</h5>
         <h5>Description: {{ currentMeal.description }}</h5>
         <button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button>
       </div>
