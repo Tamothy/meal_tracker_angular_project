@@ -32,8 +32,13 @@ export class NewMealComponent {
     //check if input form is empty
     if (name != '' && calorie != '' && description != '' ) {
       var parseCalorie = parseInt(calorie);
-      var newMealToAdd: Meal = new Meal(name, parseCalorie, description);
-      this.newMealSender.emit(newMealToAdd);
+      //check if calories is a number input
+      if ((0/parseCalorie) != 0) {
+        alert("Please enter a number for calories!");
+      } else {
+        var newMealToAdd: Meal = new Meal(name, parseCalorie, description);
+        this.newMealSender.emit(newMealToAdd);
+      }
     } else {
       alert("Please fill out the form!");
     }

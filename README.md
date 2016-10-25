@@ -6,7 +6,7 @@
 
 ## Description
 
-This project manages logged meals for the user. A user can add new meals, edit meals, and filtering which meals are low and high in calories. This utilizes JavaScript framework AngularJS, incorporating components and pipe concepts.
+This project manages logged meals for a user. A user can add new meals, edit meals, and filtering which meals are low and high in calories. This utilizes JavaScript framework AngularJS, incorporating components and pipe concepts.
 
 ## Setup/Installation Requirements
 
