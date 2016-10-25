@@ -27,7 +27,7 @@ export class AppComponent {
       new Meal("Spaghetti.", 900, "I am in a food coma."),
       new Meal("Salad", 100, "It didn't fill me up."),
       new Meal("Chips", 200, "I'm lethargic."),
-      new Meal("Vegan burger", 450, "Prety good burger, but didn't fill me up."),
+      new Meal("Vegan burger", 450, "Pretty good burger, but didn't fill me up."),
       new Meal("Macaroni and Cheese", 900, "This filled me up nicely."),
       new Meal("Maple doughnut", 10, "Absolutely horrendous. Doughnut didn't use any flour, but powdered grass as a substitute.")
   ];
